@@ -1,2 +1,0 @@
-# Oxify Vehicle positions
-

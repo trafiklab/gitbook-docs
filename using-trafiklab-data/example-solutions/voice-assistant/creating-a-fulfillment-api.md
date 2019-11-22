@@ -181,7 +181,7 @@ The following table shows which API can be used for each purpose, depending on t
 \* ResRobot also works in Stockholm, but the SL APIs might offer better accuracy and realtime data.  
 \*\* API versions are the latest at time of writing. Future versions will be just as suited for this.
 
-To use these APIs, you can either use [our SDKs](../../our-sdks-and-libraries/), or write your own client. You can also make use of the [GTFS Sverige 2](../../../an-introduction-to-trafiklab/our-data-and-apis/gtfs/gtfs-sverige-2-static.md) [stops.txt](../../../public-transport-data/transport-data-formats/gtfs/stops.md) file to find the stop id for a given name on your own server without any API, or [SL's hallplatser-och-linjer-2](https://www.trafiklab.se/api/sl-hallplatser-och-linjer-2) dataset to do the same for SL.
+To use these APIs, you can either use [our SDKs](../../our-sdks-and-libraries/), or write your own client. You can also make use of the [GTFS Sverige 2](../../../public-transport-data/our-data-and-apis/gtfs/gtfs-sverige-2-static.md) [stops.txt](../../../public-transport-data/transport-data-formats/gtfs/stops.md) file to find the stop id for a given name on your own server without any API, or [SL's hallplatser-och-linjer-2](https://www.trafiklab.se/api/sl-hallplatser-och-linjer-2) dataset to do the same for SL.
 
 ### 
 

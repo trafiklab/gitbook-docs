@@ -12,7 +12,7 @@ To start, go [the account creation page](https://www.trafiklab.se/user/register)
 
 You need to fill in a valid mail address and username. This mail address will be used to contact you if we make changes to an API you are using. Your email address will not be made public.
 
-![Your mail address and username](../../.gitbook/assets/image%20%285%29.png)
+![Your mail address and username](../../.gitbook/assets/image%20%286%29.png)
 
 Accept the terms and conditions
 
@@ -24,5 +24,5 @@ And confirm you're not a robot
 
 Hit the submit button, and you will receive a one-time login link in your email. Using this link you can login and choose a password.
 
-![The submit button](../../.gitbook/assets/image%20%284%29.png)
+![The submit button](../../.gitbook/assets/image%20%285%29.png)
 

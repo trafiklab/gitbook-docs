@@ -1,12 +1,28 @@
 # Frequently asked questions
 
-## Can I become who I want to be?
+## Trafiklab
 
-That's a tough question but thankfully, our team is on it. Please bear with us while we're investigating.
+### Why do I need API keys? Wouldn't it be easier without?
 
-## Have you had a chance to answer the previous question?
+### What happens when an API is discontinued?
 
-Yes, after a few months we finally found the answer. Sadly, Mike is on vacations right now so I'm afraid we are not able to provide the answer at this point.
+### Whenever I try to edit my project, I get a warning about old keys which will be removed. Why is this and what should I do?
+
+## Data
+
+### Vehicles are appearing and disappearing out of nowhere in the realtime data. Why is this?
+
+### Can I stress test the APIs?
+
+### Why did my request for an API key upgrade get denied?
+
+## I still have questions
+
+Don't hesitate and reach out to us! You can do so by posting to our support forum: [https://kundo.se/org/trafiklabse/](https://kundo.se/org/trafiklabse/) 
+
+
+
+
 
 
 

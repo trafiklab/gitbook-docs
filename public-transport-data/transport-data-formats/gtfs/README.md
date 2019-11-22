@@ -1,4 +1,4 @@
-# GTFS-Static Specification
+# Reading GTFS Files
 
 {% hint style="info" %}
 This content was retrieved from [https://developers.google.com/transit/gtfs/reference](https://developers.google.com/transit/gtfs/reference), and has been adapted to show which fields are used by Trafiklab.
