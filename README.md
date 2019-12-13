@@ -4,7 +4,7 @@ description: 'Where are we, what is this place?'
 
 # Introduction
 
-Date is worthless when it's not being used. And using data is hard when there is no, or needlessly complicated documentation. That's why we set out to document everything that can be done or found on Trafiklab. Everything you possibly want to know, you can find it here. Welcome to our new documentation.
+Data is worthless when it's not being used. And using data is hard when there is no, or needlessly complicated documentation. That's why we set out to document everything that can be done or found on Trafiklab. Everything you possibly want to know, you can find it here. Welcome to our new documentation.
 
 ![](.gitbook/assets/giphy-1%20%281%29.gif)
 

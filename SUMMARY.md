@@ -5,14 +5,12 @@
 ## An introduction to Trafiklab
 
 * [About Trafiklab](an-introduction-to-trafiklab/about-trafiklab.md)
-* [Creating your first project](an-introduction-to-trafiklab/creating-your-first-project/README.md)
+* [Projects and API keys](an-introduction-to-trafiklab/creating-your-first-project/README.md)
   * [Creating an account](an-introduction-to-trafiklab/creating-your-first-project/creating-an-account.md)
   * [Creating a project](an-introduction-to-trafiklab/creating-your-first-project/creating-a-project.md)
+  * [Adding APIs to a project](an-introduction-to-trafiklab/creating-your-first-project/adding-apis-to-a-project.md)
   * [Getting API keys](an-introduction-to-trafiklab/creating-your-first-project/getting-api-keys.md)
-* [Managing your project](an-introduction-to-trafiklab/managing-your-project/README.md)
-  * [Adding a new API to an existing project](an-introduction-to-trafiklab/managing-your-project/adding-a-new-api-to-an-existing-project.md)
-  * [Upgrading your API keys](an-introduction-to-trafiklab/managing-your-project/upgrading-your-api-keys.md)
-  * [Removing an API from your project](an-introduction-to-trafiklab/managing-your-project/removing-an-api-from-your-project.md)
+  * [Upgrading API keys](an-introduction-to-trafiklab/creating-your-first-project/upgrading-api-keys.md)
 * [Frequently asked questions](an-introduction-to-trafiklab/frequently-asked-questions.md)
 
 ## Public Transport Data
