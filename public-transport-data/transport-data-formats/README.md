@@ -2,5 +2,5 @@
 description: 'How to handle GTFS, JSON, and other data formats.'
 ---
 
-# Accessing and using data
+# Using data
 

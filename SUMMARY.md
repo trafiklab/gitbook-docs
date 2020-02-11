@@ -5,12 +5,12 @@
 ## An introduction to Trafiklab
 
 * [About Trafiklab](an-introduction-to-trafiklab/about-trafiklab.md)
-* [Projects and API keys](an-introduction-to-trafiklab/creating-your-first-project/README.md)
-  * [Creating an account](an-introduction-to-trafiklab/creating-your-first-project/creating-an-account.md)
-  * [Creating a project](an-introduction-to-trafiklab/creating-your-first-project/creating-a-project.md)
-  * [Adding APIs to a project](an-introduction-to-trafiklab/creating-your-first-project/adding-apis-to-a-project.md)
-  * [Getting API keys](an-introduction-to-trafiklab/creating-your-first-project/getting-api-keys.md)
-  * [Upgrading API keys](an-introduction-to-trafiklab/creating-your-first-project/upgrading-api-keys.md)
+* [Using Trafiklab](an-introduction-to-trafiklab/using-trafiklab/README.md)
+  * [Creating an account](an-introduction-to-trafiklab/using-trafiklab/creating-an-account.md)
+  * [Creating a project](an-introduction-to-trafiklab/using-trafiklab/creating-a-project.md)
+  * [Adding APIs to a project](an-introduction-to-trafiklab/using-trafiklab/adding-apis-to-a-project.md)
+  * [Getting API keys](an-introduction-to-trafiklab/using-trafiklab/getting-api-keys.md)
+  * [Upgrading API keys](an-introduction-to-trafiklab/using-trafiklab/upgrading-api-keys.md)
 * [Frequently asked questions](an-introduction-to-trafiklab/frequently-asked-questions.md)
 
 ## Public Transport Data
@@ -37,9 +37,8 @@
   * [Oxify Vehicle positions](public-transport-data/our-data-and-apis/oxify-vehicle-positions.md)
   * [Combining data and APIs](public-transport-data/our-data-and-apis/combining-data.md)
 * [The right data type for your project](public-transport-data/the-right-data-type-for-your-project.md)
-* [Accessing and using data](public-transport-data/transport-data-formats/README.md)
+* [Using data](public-transport-data/transport-data-formats/README.md)
   * [Calling APIs](public-transport-data/transport-data-formats/json/README.md)
-    * [Client-side caching](public-transport-data/transport-data-formats/json/client-side-caching.md)
     * [Conditional GET requests](public-transport-data/transport-data-formats/json/conditional-get-requests.md)
     * [Calling APIs from a browser](public-transport-data/transport-data-formats/json/calling-apis-from-a-browser.md)
   * [Reading GTFS Files](public-transport-data/transport-data-formats/gtfs/README.md)
@@ -57,7 +56,6 @@
 
 ## Developing with trafiklab <a id="using-trafiklab-data"></a>
 
-* [Using Trafiklab data in your project](using-trafiklab-data/using-trafiklab-data-in-your-project.md)
 * [Our SDKs and libraries](using-trafiklab-data/our-sdks-and-libraries/README.md)
   * [Java](using-trafiklab-data/our-sdks-and-libraries/java.md)
   * [PHP](using-trafiklab-data/our-sdks-and-libraries/php/README.md)
@@ -65,8 +63,8 @@
     * [GTFS PHP SDK](using-trafiklab-data/our-sdks-and-libraries/php/gtfs-php-sdk.md)
 * [Best practices](using-trafiklab-data/best-practices/README.md)
   * [Interpreting HTTP Headers](using-trafiklab-data/best-practices/interpreting-http-headers.md)
+  * [Client-side caching](using-trafiklab-data/best-practices/client-side-caching.md)
   * [Limiting requests](using-trafiklab-data/best-practices/limiting-requests.md)
-  * [Re-using data](using-trafiklab-data/best-practices/re-using-data.md)
   * [Keeping API keys secret](using-trafiklab-data/best-practices/keeping-api-keys-secret.md)
 * [Code fragments](using-trafiklab-data/code-fragments/README.md)
   * [Calling APIs](using-trafiklab-data/code-fragments/example-gtfs-scripts.md)
