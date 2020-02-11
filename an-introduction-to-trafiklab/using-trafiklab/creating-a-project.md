@@ -12,7 +12,7 @@ After logging in, you can head to [your profile page](https://www.trafiklab.se/u
 
 After entering a name, you can select which APIs you want to use. Don't worry if you're still unsure about which ones you need - [you can change this and other settings later](). Projects which will be included get marked in purple.
 
-![](../../.gitbook/assets/image%20%284%29.png)
+![](../../.gitbook/assets/image%20%285%29.png)
 
 Enter a short description and some tags for your project, so others can easily find it. Thereafter you can press the save button \("spara"\) to create your project.
 

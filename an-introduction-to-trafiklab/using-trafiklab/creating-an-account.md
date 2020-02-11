@@ -18,7 +18,7 @@ You can also register and login through Github. In order to do so, just click th
 
 You need to fill in a valid mail address and username. This email address will be used to contact you if we make changes to an API you are using. Your email address will never be made public.
 
-![Your mail address and username](../../.gitbook/assets/image%20%2812%29.png)
+![Your mail address and username](../../.gitbook/assets/image%20%2813%29.png)
 
 While the first- and last-name fields are required, you use your initials if you want. You can also, optionally, sign up for the Trafiklab newsletter.
 

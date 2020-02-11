@@ -2,11 +2,11 @@
 
 When your application needs more API calls than your API key quota allow, you can upgrade your keys to a higher level. Upgrading API keys is completely free, and only needed to ensure all Trafiklab users can keep using the the service for free. 
 
-![You can see and upgrade the level of your API keys for each individual key](../../.gitbook/assets/image%20%286%29.png)
+![You can see and upgrade the level of your API keys for each individual key](../../.gitbook/assets/image%20%287%29.png)
 
 In order to upgrade your API key, click the "Uppgradera" link and fill out the form.
 
-![](../../.gitbook/assets/image%20%282%29.png)
+![](../../.gitbook/assets/image%20%283%29.png)
 
 Change the level you'd like from the dropdown list. Write a motivation below. Your motivation should include:
 

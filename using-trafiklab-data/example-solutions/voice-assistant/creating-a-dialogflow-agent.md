@@ -37,7 +37,7 @@ While there is a wide range of built-in entities, we can also create our own. We
 
 **Important:** When adding a new language for your _agent_, you will need to create the entity again. In this case, use the same reference values but use translated synonyms.
 
-![Our own DialogFlow entity](../../../.gitbook/assets/image%20%285%29.png)
+![Our own DialogFlow entity](../../../.gitbook/assets/image%20%286%29.png)
 
 We now change our transportation method in our intent from `@sys.any` to `@transportation-method` to make use of our newly created entity. Previously, when the user said "When does the next train in Stockholm leave", the voice assistant might understand "train in" as "training", and store "training" in the variable. Now that we use our own entity, the voice assistant knows what can go in the transportation-method variable. If it recognizes "training" where a transportation method should go, it will automatically correct it to "train in", and store "train" in the variable.
 

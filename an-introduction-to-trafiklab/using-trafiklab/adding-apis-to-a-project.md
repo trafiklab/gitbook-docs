@@ -20,7 +20,7 @@ You can see a warning when saving a project that contains deprecated APIs. Conti
 
 When editing an existing project, you might be confronted with a warning when you save.
 
-![The warning which is shown when your project contains deprecated APIs](../../.gitbook/assets/image%20%2813%29.png)
+![The warning which is shown when your project contains deprecated APIs](../../.gitbook/assets/image%20%2815%29.png)
 
 This means you still have an old API in your project, while the API has been shut down. In this case you will be forced to remove the old API and its associated keys. Press the "Delete keys" button and save the project to make it "normal" again, after which you can edit it as you like. 
 

@@ -14,5 +14,5 @@ ResRobot is an API which provides information for public transport in entire Swe
 If you want to do analytics, or if your service will have more than a million active users, we recommend using GTFS and hosting your own API based on that data.
 {% endhint %}
 
-{% page-ref page="../gtfs/gtfs-sverige-2-static.md" %}
+{% page-ref page="../gtfs/gtfs-sverige-2-static/" %}
 
