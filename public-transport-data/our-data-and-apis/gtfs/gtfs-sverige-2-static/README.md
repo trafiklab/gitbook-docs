@@ -1,6 +1,6 @@
 # GTFS Sverige 2
 
-## What does this dataset contains?
+### What does this dataset contains?
 
 GTFS Sverige is our national feed. It contains all public transport in the entire country of Sweden. The data is correct, but lacks the details which are included in the GTFS Regional dataset.
 
@@ -22,7 +22,7 @@ This dataset has the **stable** status. This means that we will communicate when
 
 ### Historical data
 
-The historical data contains information for a period of more than 5 years. It is an excellent dataset to analyze evolutions over time.
+The historical data contains information for a period of more than 5 years. It is an excellent dataset to analyse evolutions over time.
 
 
 

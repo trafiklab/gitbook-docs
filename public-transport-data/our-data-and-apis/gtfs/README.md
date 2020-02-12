@@ -37,7 +37,7 @@ At Trafiklab, we offer two GTFS feeds. The first is [GTFS Sverige 2](https://www
 | Real-time data | Only static data | Static + Real-time + GPS positions |
 | Historical data \(static\) | Since 2012 | Not available |
 
-### Read more
+## Read more
 
 {% page-ref page="gtfs-sverige-2-static/" %}
 
