@@ -24,7 +24,6 @@
     * [GTFS Regional](public-transport-data/our-data-and-apis/gtfs/gtfs-regional/README.md)
       * [Static data](public-transport-data/our-data-and-apis/gtfs/gtfs-regional/gtfs-regional-static.md)
       * [Realtime data](public-transport-data/our-data-and-apis/gtfs/gtfs-regional/gtfs-regional-realtime.md)
-      * [GTFS Vehicle positions](public-transport-data/our-data-and-apis/gtfs/gtfs-regional/gtfs-vehicle-positions.md)
       * [Extra files](public-transport-data/our-data-and-apis/gtfs/gtfs-regional/extra-files.md)
   * [ResRobot](public-transport-data/our-data-and-apis/resrobot/README.md)
     * [ResRobot Routeplanner](public-transport-data/our-data-and-apis/resrobot/resrobot-routeplanner.md)
