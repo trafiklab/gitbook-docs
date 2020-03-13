@@ -32,7 +32,7 @@ The vehiclepositions.pb feed contains the GPS positions for all operators. Depen
 
 You can read more about how to use realtime data in our Using data chapter:
 
-{% page-ref page="../../../transport-data-formats/using-gtfs-files.md" %}
+{% page-ref page="../../../transport-data-formats/using-gtfs-files/" %}
 
 
 

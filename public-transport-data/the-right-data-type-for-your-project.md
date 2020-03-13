@@ -21,7 +21,7 @@ You do not need to write your own routeplanning algorithm. There are a lot of ex
 {% endhint %}
 
 {% hint style="info" %}
-There are over 50.000 stop locations in Sweden. It would take 25 million API calls to create an isochrone map from every stop to every stop.This is equal to all ResRobot API traffic for 60 days.
+There are over 50.000 stop locations in Sweden. It would take 25 million API calls to create an isochrone map from every stop to every stop.This is equal to all ResRobot API traffic for 2 months.
 {% endhint %}
 
 ### Creating your own routeplanner algorithm
