@@ -1,6 +1,6 @@
 # Static GTFS files
 
-## ow GTFS works
+## How GTFS works
 
 A GTFS File is a zip file containing multiple text files. Every text file contains all data for one specific data type \(stops, routes, ...\) as comma-separated values. These files can be compared to a table in a database, with _foreign keys_ linking these files together.
 
@@ -94,8 +94,6 @@ route_id,agency_id,route_short_name,route_long_name,route_type
 
 ### trips.txt
 
-
-
 | Field Name | Type | Present | Description |
 | :--- | :--- | :--- | :--- |
 | `route_id` | ID referencing `routes.route_id` | **Always** | Identifies a route. |
@@ -104,7 +102,9 @@ route_id,agency_id,route_short_name,route_long_name,route_type
 | `trip_headsign` | Text | Optional | Text that appears on signage identifying the trip's destination to riders. Use this field to distinguish between different patterns of service on the same route. If the headsign changes during a trip, `trip_headsign` can be overridden by specifying values for the `stop_times.stop_headsign`. |
 | `trip_short_name` | Text | Optional | Public facing text used to identify the trip to riders, for instance, to identify train numbers for commuter rail trips. If riders do not commonly rely on trip names, leave this field empty. A `trip_short_name` value, if provided, should uniquely identify a trip within a service day; it should not be used for destination names or limited/express designations. |
 | `direction_id` | Enum | Optional | Indicates the direction of travel for a trip. This field is not used in routing; it provides a way to separate trips by direction when publishing time tables. Valid options are:  `0` - Travel in one direction \(e.g. outbound travel\). `1` - Travel in the opposite direction \(e.g. inbound travel\). |
-| `shape_id` | ID referencing `shapes.shape_id` | Optional | Identifies a geospatial shape describing the vehicle travel path for a trip. |
+| `shape_id` | ID referencing `shapes.shape_id` | GTFS Regional only | Identifies a geospatial shape describing the vehicle travel path for a trip. |
+
+The following excerpt shows what a trips.txt file can look like:
 
 ```text
 route_id,service_id,trip_id,trip_headsign,direction_id,shape_id
@@ -114,9 +114,13 @@ route_id,service_id,trip_id,trip_headsign,direction_id,shape_id
 9011014255000000,1,141010000961948014,,0,1
 ```
 
+{% hint style="info" %}
+This example doesn't include a headsign, which means descriptions must be obtained from a higher lever \(route\) or lower level \(stop time\).
+{% endhint %}
+
 ### stop\_times.txt
 
-
+A stop time is a certain trip picking up or dropping of passengers at a certain stop,  at a certain time.
 
 <table>
   <thead>
@@ -208,23 +212,25 @@ route_id,service_id,trip_id,trip_headsign,direction_id,shape_id
       <td style="text-align:left"><code>stop_headsign</code>
       </td>
       <td style="text-align:left">Text</td>
-      <td style="text-align:left">Optional</td>
-      <td style="text-align:left">Text that appears on signage identifying the trip&apos;s destination to
-        riders. This field overrides the default <code>trips.trip_headsign</code> when
-        the headsign changes between stops. If the headsign is displayed for an
-        entire trip, use <code>trips.trip_headsign</code> instead.
-        <br />
-        <br />A <code>stop_headsign</code> value specified for one <code>stop_time</code> does
-        not apply to subsequent <code>stop_time</code>s in the same trip. If you
-        want to override the <code>trip_headsign</code> for multiple <code>stop_time</code>s
-        in the same trip, the <code>stop_headsign</code> value must be repeated in
-        each <code>stop_time</code> row.</td>
+      <td style="text-align:left">GTFS Regional only</td>
+      <td style="text-align:left">
+        <p>Text that appears on signage identifying the trip&apos;s destination to
+          riders. This field overrides the default <code>trips.trip_headsign</code> when
+          the headsign changes between stops. If the headsign is displayed for an
+          entire trip, use <code>trips.trip_headsign</code> instead.
+          <br />
+          <br />A <code>stop_headsign</code> value specified for one <code>stop_time</code> does
+          not apply to subsequent <code>stop_time</code>s in the same trip.</p>
+        <p></p>
+        <p>&#x2139;GTFS Regional specifies the stop_headsign for each stop</p>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left"><code>pickup_type</code>
       </td>
       <td style="text-align:left">Enum</td>
-      <td style="text-align:left">Optional</td>
+      <td style="text-align:left"><b>Always</b>
+      </td>
       <td style="text-align:left">Indicates pickup method. Valid options are:
         <br />
         <br /><code>0</code> or empty - Regularly scheduled pickup.
@@ -236,7 +242,8 @@ route_id,service_id,trip_id,trip_headsign,direction_id,shape_id
       <td style="text-align:left"><code>drop_off_type</code>
       </td>
       <td style="text-align:left">Enum</td>
-      <td style="text-align:left">Optional</td>
+      <td style="text-align:left"><b>Always</b>
+      </td>
       <td style="text-align:left">Indicates drop off method. Valid options are:
         <br />
         <br /><code>0</code> or empty - Regularly scheduled drop off.
@@ -248,7 +255,7 @@ route_id,service_id,trip_id,trip_headsign,direction_id,shape_id
       <td style="text-align:left"><code>shape_dist_traveled</code>
       </td>
       <td style="text-align:left">Non-negative float</td>
-      <td style="text-align:left">Optional</td>
+      <td style="text-align:left">GTFS Regional only</td>
       <td style="text-align:left">
         <p>Actual distance travelled along the associated shape, from the first stop
           to the stop specified in this record. This field specifies how much of
@@ -264,7 +271,7 @@ route_id,service_id,trip_id,trip_headsign,direction_id,shape_id
       <td style="text-align:left"><code>timepoint</code>
       </td>
       <td style="text-align:left">Enum</td>
-      <td style="text-align:left">Optional</td>
+      <td style="text-align:left">GTFS Regional only</td>
       <td style="text-align:left">Indicates if arrival and departure times for a stop are strictly adhered
         to by the vehicle or if they are instead approximate and/or interpolated
         times. This field allows a GTFS producer to provide interpolated stop-times,
@@ -275,32 +282,31 @@ route_id,service_id,trip_id,trip_headsign,direction_id,shape_id
         <br /><code>1</code> or empty - Times are considered exact.</td>
     </tr>
   </tbody>
-</table>```text
+</table>{% hint style="warning" %}
+Stop\_times.txt is usually the largest file in a GTFS feed. Depending on the hardware and programming language, it can be computationally intensive to read all the data. Make sure you read this file in an efficient way \(for example by caching data, not reading the entire file into memory, ...\).
+{% endhint %}
+
+The following excerpt shows some stop\_times from a GTFS Regional feed.
+
+```text
 trip_id,arrival_time,departure_time,stop_id,stop_sequence,stop_headsign,pickup_type,drop_off_type,shape_dist_traveled,timepoint
-141010000961947846,08:30:00,08:30:00,9022014017767002,1,BorÃ¥s,3,1,0,1
-141010000961947846,08:32:00,08:32:00,9022014017513002,2,BorÃ¥s,3,3,794,1
-141010000961947846,08:32:51,08:32:51,9022014017516002,3,BorÃ¥s,3,3,1071,0
-141010000961947846,08:34:27,08:34:27,9022014017568002,4,BorÃ¥s,3,3,1620.12,0
+141010000961947846,08:30:00,08:30:00,9022014017767002,1,Borås,3,1,0,1
+141010000961947846,08:32:00,08:32:00,9022014017513002,2,Borås,3,3,794,1
+141010000961947846,08:32:51,08:32:51,9022014017516002,3,Borås,3,3,1071,0
+141010000961947846,08:34:27,08:34:27,9022014017568002,4,Borås,3,3,1620.12,0
 ```
 
 ### stops.txt
 
-| Field Name | Type | Required | Description |
+| Field Name | Type | Present | Description |
 | :--- | :--- | :--- | :--- |
-| `stop_id` | ID | **Required** | Identifies a stop, station, or station entrance.   The term "station entrance" refers to both station entrances and station exits. Stops, stations or station entrances are collectively referred to as locations. Multiple routes may use the same stop. |
-| `stop_code` | Text | Optional | Short text or a number that identifies the location for riders. These codes are often used in phone-based transit information systems or printed on signage to make it easier for riders to get information for a particular location. The `stop_code` can be the same as `stop_id` if it is public facing. This field should be left empty for locations without a code presented to riders. |
-| `stop_name` | Text | **Conditionally Required** | Name of the location. Use a name that people will understand in the local and tourist vernacular.  When the location is a boarding area \(`location_type=4`\), the `stop_name` should contains the name of the boarding area as displayed by the agency. It could be just one letter \(like on some European intercity railway stations\), or text like “Wheelchair boarding area” \(NYC’s Subway\) or “Head of short trains” \(Paris’ RER\).  Conditionally Required: • **Required** for locations which are stops \(`location_type=0`\), stations \(`location_type=1`\) or entrances/exits \(`location_type=2`\). • Optional for locations which are generic nodes \(`location_type=3`\) or boarding areas \(`location_type=4`\). |
-| `stop_desc` | Text | Optional | Description of the location that provides useful, quality information. Do not simply duplicate the name of the location. |
-| `stop_lat` | Latitude | **Conditionally Required** | Latitude of the location.  Conditionally Required: • **Required** for locations which are stops \(`location_type=0`\), stations \(`location_type=1`\) or entrances/exits \(`location_type=2`\). • Optional for locations which are generic nodes \(`location_type=3`\) or boarding areas \(`location_type=4`\). |
-| `stop_lon` | Longitude | **Conditionally Required** | Longitude of the location.  Conditionally Required: • **Required** for locations which are stops \(`location_type=0`\), stations \(`location_type=1`\) or entrances/exits \(`location_type=2`\). • Optional for locations which are generic nodes \(`location_type=3`\) or boarding areas \(`location_type=4`\). |
-| `zone_id` | ID | **Conditionally Required** | Identifies the fare zone for a stop. This field is required if providing fare information using [fare\_rules.txt](https://developers.google.com/transit/gtfs/reference/#fare_rulestxt), otherwise it is optional. If this record represents a station or station entrance, the `zone_id` is ignored. |
-| `stop_url` | URL | Optional | URL of a web page about the location. This should be different from the `agency.agency_url` and the `routes.route_url` field values. |
-| `location_type` | Enum | Optional | Type of the location: • `0` \(or blank\): **Stop** \(or **Platform**\). A location where passengers board or disembark from a transit vehicle. Is called a platform when defined within a `parent_station`. • `1`: **Station**. A physical structure or area that contains one or more platform. • `2`: **Entrance/Exit**. A location where passengers can enter or exit a station from the street. If an entrance/exit belongs to multiple stations, it can be linked by pathways to both, but the data provider must pick one of them as parent. • `3`: **Generic Node**. A location within a station, not matching any other `location_type`, which can be used to link together pathways define in pathways.txt. • `4`: **Boarding Area**. A specific location on a platform, where passengers can board and/or alight vehicles. |
-| `parent_station` | ID referencing `stops.stop_id` | **Conditionally Required** | Defines hierarchy between the different locations defined in `stops.txt`. It contains the ID of the parent location, as followed: • **Stop/platform** \(`location_type=0`\): the `parent_station` field contains the ID of a station. • **Station** \(`location_type=1`\): this field must be empty. • **Entrance/exit** \(`location_type=2`\) or **generic node** \(`location_type=3`\): the `parent_station` field contains the ID of a station \(`location_type=1`\) • **Boarding Area** \(`location_type=4`\): the `parent_station` field contains ID of a platform.  Conditionally Required: • **Required** for locations which are entrances \(`location_type=2`\), generic nodes \(`location_type=3`\) or boarding areas \(`location_type=4`\). • Optional for stops/platforms \(`location_type=0`\). • Forbidden for stations \(`location_type=1`\). |
-| `stop_timezone` | Timezone | Optional | Timezone of the location. If the location has a parent station, it inherits the parent station’s timezone instead of applying its own. Stations and parentless stops with empty `stop_timezone` inherit the timezone specified by `agency.agency_timezone`. If `stop_timezone` values are provided, the times in [stop\_times.txt](https://developers.google.com/transit/gtfs/reference/#stop_timetxt) should be entered as the time since midnight in the timezone specified by `agency.agency_timezone`. This ensures that the time values in a trip always increase over the course of a trip, regardless of which timezones the trip crosses. |
-| `wheelchair_boarding` | Enum | Optional | Indicates whether wheelchair boardings are possible from the location. Valid options are:  For parentless stops: `0` or empty - No accessibility information for the stop. `1` - Some vehicles at this stop can be boarded by a rider in a wheelchair. `2` - Wheelchair boarding is not possible at this stop.  For child stops: `0` or empty - Stop will inherit its `wheelchair_boarding` behavior from the parent station, if specified in the parent. `1` - There exists some accessible path from outside the station to the specific stop/platform. `2` - There exists no accessible path from outside the station to the specific stop/platform.   For station entrances/exits: `0` or empty - Station entrance will inherit its `wheelchair_boarding` behavior from the parent station, if specified for the parent. `1` - Station entrance is wheelchair accessible. `2` - No accessible path from station entrance to stops/platforms. |
-| `level_id` | ID referencing `levels.level_id` | Optional | Level of the location. The same level can be used by multiple unlinked stations. |
-| `platform_code` | Text | Optional | Platform identifier for a platform stop \(a stop belonging to a station\). This should be just the platform identifier \(eg. "G" or "3"\). Words like “platform” or "track" \(or the feed’s language-specific equivalent\) should not be included. This allows feed consumers to more easily internationalize and localize the platform identifier into other languages. |
+| `stop_id` | ID | **Always** | Identifies a stop, station, or station entrance.   The term "station entrance" refers to both station entrances and station exits. Stops, stations or station entrances are collectively referred to as locations. Multiple routes may use the same stop. |
+| `stop_name` | Text | **Always** | Name of the location. Use a name that people will understand in the local and tourist vernacular.  When the location is a boarding area \(`location_type=4`\), the `stop_name` should contains the name of the boarding area as displayed by the agency. It could be just one letter \(like on some European intercity railway stations\), or text like “Wheelchair boarding area” \(NYC’s Subway\) or “Head of short trains” \(Paris’ RER\).  |
+| `stop_lat` | Latitude | **Always** | Latitude of the location.  Conditionally Required: • **Required** for locations which are stops \(`location_type=0`\), stations \(`location_type=1`\) or entrances/exits \(`location_type=2`\). • Optional for locations which are generic nodes \(`location_type=3`\) or boarding areas \(`location_type=4`\). |
+| `stop_lon` | Longitude | **Always** | Longitude of the location.  Conditionally Required: • **Required** for locations which are stops \(`location_type=0`\), stations \(`location_type=1`\) or entrances/exits \(`location_type=2`\). • Optional for locations which are generic nodes \(`location_type=3`\) or boarding areas \(`location_type=4`\). |
+| `location_type` | Enum | **Always** | Type of the location: • `0` \(or blank\): **Stop** \(or **Platform**\). A location where passengers board or disembark from a transit vehicle. Is called a platform when defined within a `parent_station`. • `1`: **Station**. A physical structure or area that contains one or more platform. • `2`: **Entrance/Exit**. A location where passengers can enter or exit a station from the street. If an entrance/exit belongs to multiple stations, it can be linked by pathways to both, but the data provider must pick one of them as parent. |
+| `parent_station` | ID referencing `stops.stop_id` | GTFS Regional only | Defines hierarchy between the different locations defined in `stops.txt`. It contains the ID of the parent location, as followed: • **Stop/platform** \(`location_type=0`\): the `parent_station` field contains the ID of a station. • **Station** \(`location_type=1`\): this field must be empty. • **Entrance/exit** \(`location_type=2`\) or **generic node** \(`location_type=3`\): the `parent_station` field contains the ID of a station \(`location_type=1`\) |
+| `platform_code` | Text | GTFS Regional only | Platform identifier for a platform stop \(a stop belonging to a station\). |
 
 ```text
 stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,platform_code
