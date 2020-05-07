@@ -8,7 +8,7 @@ The **General Transit Format Specification** is a file format which originally w
 
 A GTFS file is a zip archive that contains several \*.txt files. You can compare this archive file with a database. The files inside the archive contain Comma Separated Values \(CSV\) data, meaning they are easy to read, both for computers and humans. Each file contains all the instances of a certain type, just like a database table. For example, one file contains all the routes, another file contains all the stops.  The files are linked together through ids, similar to how foreign keys work in a database. The image below gives an idea of the structure.
 
-![The structure of a GTFS dataset](../../../.gitbook/assets/image%20%2814%29.png)
+![The structure of a GTFS dataset](../../../.gitbook/assets/image%20%2815%29.png)
 
 ### When should I use GTFS?
 

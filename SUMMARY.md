@@ -40,7 +40,7 @@
   * [Oxify Vehicle positions](public-transport-data/our-data-and-apis/oxify-vehicle-positions.md)
   * [Combining data and APIs](public-transport-data/our-data-and-apis/combining-data.md)
 * [The right data type for your project](public-transport-data/the-right-data-type-for-your-project.md)
-* [Using data](public-transport-data/transport-data-formats/README.md)
+* [Using our data](public-transport-data/transport-data-formats/README.md)
   * [Using GTFS Files](public-transport-data/transport-data-formats/using-gtfs-files/README.md)
     * [Static GTFS files](public-transport-data/transport-data-formats/using-gtfs-files/static-gtfs-files.md)
     * [Realtime GTFS files](public-transport-data/transport-data-formats/using-gtfs-files/realtime-gtfs-files.md)

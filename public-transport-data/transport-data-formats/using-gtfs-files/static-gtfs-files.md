@@ -42,6 +42,12 @@ Different trips on the same route might make use of different stops.
 
 ## What does each GTFS file contain
 
+{% hint style="warning" %}
+The content below is based on the official GTFS Specification, developed by the GTFS community and published at [https://developers.google.com/transit/gtfs/reference/](https://developers.google.com/transit/gtfs/reference/).
+
+We modified the version below to describe the feeds published by Trafiklab. Fields and files that are not included in any Trafiklab feed are not described below. For the latest version or in case of conflict, refer to the official documentation.
+{% endhint %}
+
 ### agency.txt
 
 | Field Name | Type | Present | Description |
@@ -318,18 +324,22 @@ stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station,platform_code
 
 ### calendar.txt
 
-| Field Name | Type | Required | Description |
+| Field Name | Type | Present | Description |
 | :--- | :--- | :--- | :--- |
-| `service_id` | ID | **Required** | Uniquely identifies a set of dates when service is available for one or more routes. Each `service_id` value can appear at most once in a [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt) file. |
-| `monday` | Enum | **Required** | Indicates whether the service operates on all Mondays in the date range specified by the `start_date` and `end_date` fields. Note that exceptions for particular dates may be listed in [calendar\_dates.txt](https://developers.google.com/transit/gtfs/reference/#calendar_datestxt). Valid options are:  `1` - Service is available for all Mondays in the date range. `0` - Service is not available for Mondays in the date range. |
-| `tuesday` | Enum | **Required** | Functions in the same way as `monday` except applies to Tuesdays |
-| `wednesday` | Enum | **Required** | Functions in the same way as `monday` except applies to Wednesdays |
-| `thursday` | Enum | **Required** | Functions in the same way as `monday` except applies to Thursdays |
-| `friday` | Enum | **Required** | Functions in the same way as `monday` except applies to Fridays |
-| `saturday` | Enum | **Required** | Functions in the same way as `monday` except applies to Saturdays. |
-| `sunday` | Enum | **Required** | Functions in the same way as `monday` except applies to Sundays. |
-| `start_date` | Date | **Required** | Start service day for the service interval. |
-| `end_date` | Date | **Required** | End service day for the service interval. This service day is included in the interval. |
+| `service_id` | ID | **Always** | Uniquely identifies a set of dates when service is available for one or more routes. Each `service_id` value can appear at most once in a [calendar.txt](https://developers.google.com/transit/gtfs/reference/#calendartxt) file. |
+| `monday` | Enum | **Always** | Indicates whether the service operates on all Mondays in the date range specified by the `start_date` and `end_date` fields. Note that exceptions for particular dates may be listed in [calendar\_dates.txt](https://developers.google.com/transit/gtfs/reference/#calendar_datestxt). Valid options are:  `1` - Service is available for all Mondays in the date range. `0` - Service is not available for Mondays in the date range. |
+| `tuesday` | Enum | **Always** | Functions in the same way as `monday` except applies to Tuesdays |
+| `wednesday` | Enum | **Always** | Functions in the same way as `monday` except applies to Wednesdays |
+| `thursday` | Enum | **Always** | Functions in the same way as `monday` except applies to Thursdays |
+| `friday` | Enum | **Always** | Functions in the same way as `monday` except applies to Fridays |
+| `saturday` | Enum | **Always** | Functions in the same way as `monday` except applies to Saturdays. |
+| `sunday` | Enum | **Always** | Functions in the same way as `monday` except applies to Sundays. |
+| `start_date` | Date | **Always** | Start service day for the service interval. |
+| `end_date` | Date | **Always** | End service day for the service interval. This service day is included in the interval. |
+
+{% hint style="info" %}
+Trafiklab feeds use the calendar.txt file to define the periods during which lines are operated/valid. The actual operating days are defined in calendar\_dates.txt.
+{% endhint %}
 
 ```text
 service_id,monday,tuesday,wednesday,thursday,friday,saturday,sunday,start_date,end_date
@@ -346,7 +356,7 @@ service_id,monday,tuesday,wednesday,thursday,friday,saturday,sunday,start_date,e
     <tr>
       <th style="text-align:left">Field Name</th>
       <th style="text-align:left">Type</th>
-      <th style="text-align:left">Required</th>
+      <th style="text-align:left">Present</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
@@ -354,25 +364,23 @@ service_id,monday,tuesday,wednesday,thursday,friday,saturday,sunday,start_date,e
     <tr>
       <td style="text-align:left"><code>service_id</code>
       </td>
-      <td style="text-align:left">ID referencing <code>calendar.service_id</code> or ID</td>
-      <td style="text-align:left"><b>Required</b>
+      <td style="text-align:left">ID referencing <code>calendar.service_id</code> and <code>trips.service_id</code>
+      </td>
+      <td style="text-align:left"><b>Always</b>
       </td>
       <td style="text-align:left">Identifies a set of dates when a service exception occurs for one or more
         routes. Each (<code>service_id</code>, <code>date</code>) pair can only
         appear once in <a href="https://developers.google.com/transit/gtfs/reference/#calendar_datestxt">calendar_dates.txt</a> if
         using <a href="https://developers.google.com/transit/gtfs/reference/#calendartxt">calendar.txt</a> and
         <a
-        href="https://developers.google.com/transit/gtfs/reference/#calendar_datestxt">calendar_dates.txt</a>in conjunction. If a <code>service_id</code> value
-          appears in both <a href="https://developers.google.com/transit/gtfs/reference/#calendartxt">calendar.txt</a> and
-          <a
-          href="https://developers.google.com/transit/gtfs/reference/#calendar_datestxt">calendar_dates.txt</a>, the information in <a href="https://developers.google.com/transit/gtfs/reference/#calendar_datestxt">calendar_dates.txt</a> modifies
-            the service information specified in <a href="https://developers.google.com/transit/gtfs/reference/#calendartxt">calendar.txt</a>.</td>
+        href="https://developers.google.com/transit/gtfs/reference/#calendar_datestxt">calendar_dates.txt</a>in conjunction. The information in <a href="https://developers.google.com/transit/gtfs/reference/#calendar_datestxt">calendar_dates.txt</a> modifies
+          the service information specified in <a href="https://developers.google.com/transit/gtfs/reference/#calendartxt">calendar.txt</a>.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>date</code>
       </td>
       <td style="text-align:left">Date</td>
-      <td style="text-align:left"><b>Required</b>
+      <td style="text-align:left"><b>Always</b>
       </td>
       <td style="text-align:left">Date when service exception occurs.</td>
     </tr>
@@ -380,7 +388,7 @@ service_id,monday,tuesday,wednesday,thursday,friday,saturday,sunday,start_date,e
       <td style="text-align:left"><code>exception_type</code>
       </td>
       <td style="text-align:left">Enum</td>
-      <td style="text-align:left"><b>Required</b>
+      <td style="text-align:left"><b>Always</b>
       </td>
       <td style="text-align:left">
         <p>Indicates whether service is available on the date specified in the date
@@ -411,7 +419,7 @@ service_id,date,exception_type
     <tr>
       <th style="text-align:left">Field Name</th>
       <th style="text-align:left">Type</th>
-      <th style="text-align:left">Required</th>
+      <th style="text-align:left">Present</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
@@ -420,7 +428,7 @@ service_id,date,exception_type
       <td style="text-align:left"><code>shape_id</code>
       </td>
       <td style="text-align:left">ID</td>
-      <td style="text-align:left"><b>Required</b>
+      <td style="text-align:left"><b>Always</b>
       </td>
       <td style="text-align:left">Identifies a shape.</td>
     </tr>
@@ -428,7 +436,7 @@ service_id,date,exception_type
       <td style="text-align:left"><code>shape_pt_lat</code>
       </td>
       <td style="text-align:left">Latitude</td>
-      <td style="text-align:left"><b>Required</b>
+      <td style="text-align:left"><b>Always</b>
       </td>
       <td style="text-align:left">Latitude of a shape point. Each record in <a href="https://developers.google.com/transit/gtfs/reference/#shapestxt">shapes.txt</a> represents
         a shape point used to define the shape.</td>
@@ -437,7 +445,7 @@ service_id,date,exception_type
       <td style="text-align:left"><code>shape_pt_lon</code>
       </td>
       <td style="text-align:left">Longitude</td>
-      <td style="text-align:left"><b>Required</b>
+      <td style="text-align:left"><b>Always</b>
       </td>
       <td style="text-align:left">Longitude of a shape point.</td>
     </tr>
@@ -445,41 +453,23 @@ service_id,date,exception_type
       <td style="text-align:left"><code>shape_pt_sequence</code>
       </td>
       <td style="text-align:left">Non-negative integer</td>
-      <td style="text-align:left"><b>Required</b>
+      <td style="text-align:left"><b>Always</b>
       </td>
-      <td style="text-align:left">
-        <p>Sequence in which the shape points connect to form the shape. Values must
-          increase along the trip but do not need to be consecutive.</p>
-        <p><em>Example: If the shape &quot;A_shp&quot; has three points in its definition, the </em>
-          <a
-          href="https://developers.google.com/transit/gtfs/reference/#shapestxt"><em>shapes.txt</em>
-            </a><em> file might contain these records to define the shape:</em>
-            <br /> <code>shape_id,shape_pt_lat,shape_pt_lon,shape_pt_sequence</code>
-            <br /> <code>A_shp,37.61956,-122.48161,0</code>
-            <br /> <code>A_shp,37.64430,-122.41070,6</code>
-            <br /> <code>A_shp,37.65863,-122.30839,11</code>
-        </p>
-      </td>
+      <td style="text-align:left">Sequence in which the shape points connect to form the shape. Values must
+        increase along the trip but do not need to be consecutive.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>shape_dist_traveled</code>
       </td>
       <td style="text-align:left">Non-negative float</td>
-      <td style="text-align:left">Optional</td>
+      <td style="text-align:left"><b>Always</b>
+      </td>
       <td style="text-align:left">
         <p>Actual distance traveled along the shape from the first shape point to
           the point specified in this record. Used by trip planners to show the correct
           portion of the shape on a map. Values must increase along with <code>shape_pt_sequence</code>;
-          they cannot be used to show reverse travel along a route. Distance units
-          must be consistent with those used in <a href="https://developers.google.com/transit/gtfs/reference/#stop_timestxt">stop_times.txt</a>.</p>
-        <p><em>Example: If a bus travels along the three points defined above for A_shp, the additional <code>shape_dist_traveled</code> values (shown here in kilometers) would look like this:</em>
-          <br
-          /> <code>shape_id,shape_pt_lat,shape_pt_lon,shape_pt_sequence,shape_dist_traveled</code>
-          <br
-          /> <code>A_shp,37.61956,-122.48161,0,0</code>
-          <br /><code>A_shp,37.64430,-122.41070,6,6.8310</code>
-          <br /> <code>A_shp,37.65863,-122.30839,11,15.8765</code>
-        </p>
+          they cannot be used to show reverse travel along a route. Distance in kilometres.</p>
+        <p>&lt;em&gt;&lt;/em&gt;</p>
       </td>
     </tr>
   </tbody>
@@ -493,14 +483,97 @@ shape_id,shape_pt_lat,shape_pt_lon,shape_pt_sequence,shape_dist_traveled
 
 ### transfers.txt
 
-| Field Name | Type | Required | Description |
-| :--- | :--- | :--- | :--- |
-| `from_stop_id` | ID referencing `stops.stop_id` | **Required** | Identifies a stop or station where a connection between routes begins. If this field refers to a station, the transfer rule applies to all its child stops. |
-| `to_stop_id` | ID referencing `stops.stop_id` | **Required** | Identifies a stop or station where a connection between routes ends. If this field refers to a station, the transfer rule applies to all child stops. |
-| `transfer_type` | Enum | **Required** | Indicates the type of connection for the specified \(`from_stop_id`, `to_stop_id`\) pair. Valid options are:   `0` or empty - Recommended transfer point between routes. `1` - Timed transfer point between two routes. The departing vehicle is expected to wait for the arriving one and leave sufficient time for a rider to transfer between routes. `2` - Transfer requires a minimum amount of time between arrival and departure to ensure a connection. The time required to transfer is specified by `min_transfer_time`. `3` - Transfers are not possible between routes at the location. |
-| `min_transfer_time` | Non-negative integer | Optional | Amount of time, in seconds, that must be available to permit a transfer between routes at the specified stops. The `min_transfer_time` should be sufficient to permit a typical rider to move between the two stops, including buffer time to allow for schedule variance on each route. |
-
-```text
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Field Name</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Present</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>from_stop_id</code>
+      </td>
+      <td style="text-align:left">ID referencing <code>stops.stop_id</code>
+      </td>
+      <td style="text-align:left"><b>Always</b>
+      </td>
+      <td style="text-align:left">Identifies a stop or station where a connection between routes begins.
+        If this field refers to a station, the transfer rule applies to all its
+        child stops.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>to_stop_id</code>
+      </td>
+      <td style="text-align:left">ID referencing <code>stops.stop_id</code>
+      </td>
+      <td style="text-align:left"><b>Always</b>
+      </td>
+      <td style="text-align:left">Identifies a stop or station where a connection between routes ends. If
+        this field refers to a station, the transfer rule applies to all child
+        stops.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>transfer_type</code>
+      </td>
+      <td style="text-align:left">Enum</td>
+      <td style="text-align:left"><b>Always</b>
+      </td>
+      <td style="text-align:left">Indicates the type of connection for the specified (<code>from_stop_id</code>, <code>to_stop_id</code>)
+        pair. Valid options are:
+        <br />
+        <br /> <code>0</code> or empty - Recommended transfer point between routes.
+        <br
+        /><code>1</code> - Timed transfer point between two routes. The departing
+        vehicle is expected to wait for the arriving one and leave sufficient time
+        for a rider to transfer between routes.
+        <br /><code>2</code> - Transfer requires a minimum amount of time between arrival
+        and departure to ensure a connection. The time required to transfer is
+        specified by <code>min_transfer_time</code>.
+        <br /><code>3</code> - Transfers are not possible between routes at the location.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>min_transfer_time</code>
+      </td>
+      <td style="text-align:left">Non-negative integer</td>
+      <td style="text-align:left">Optional</td>
+      <td style="text-align:left">Amount of time, in seconds, that must be available to permit a transfer
+        between routes at the specified stops. The <code>min_transfer_time</code> should
+        be sufficient to permit a typical rider to move between the two stops,
+        including buffer time to allow for schedule variance on each route.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>from_trip_id</code>
+      </td>
+      <td style="text-align:left">ID referencing <code>trips.trips_id</code>
+      </td>
+      <td style="text-align:left">Optional</td>
+      <td style="text-align:left">
+        <p>Identifies a trip where a connection between trips starts. Part of the
+          Trip-to-trip transfers extension.</p>
+        <p></p>
+        <p><a href="https://developers.google.com/transit/gtfs/reference/gtfs-extensions#TripToTripTransfers">https://developers.google.com/transit/gtfs/reference/gtfs-extensions#TripToTripTransfers</a>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>to_trip_id</code>
+      </td>
+      <td style="text-align:left">ID referencing <code>trips.trip_id</code>
+      </td>
+      <td style="text-align:left">Optional</td>
+      <td style="text-align:left">
+        <p>Identifies a trip where a connection between trips ends. Part of the Trip-to-trip
+          transfers extension.</p>
+        <p></p>
+        <p><a href="https://developers.google.com/transit/gtfs/reference/gtfs-extensions#TripToTripTransfers">https://developers.google.com/transit/gtfs/reference/gtfs-extensions#TripToTripTransfers</a>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>```text
 from_stop_id,to_stop_id,transfer_type,min_transfer_time,from_trip_id,to_trip_id
 9022014061616002,9022014061616002,1,,141010000981658971,141010000967489295
 9022014080420002,9022014080420002,1,,141010000981659030,141010000981658971
