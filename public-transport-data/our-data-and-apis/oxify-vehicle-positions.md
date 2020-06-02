@@ -130,7 +130,7 @@ On the 2020-06-01 the current list of trains is:
 
 3108 3109 3111
 
-Kalmars länstrafik
+**Kalmars länstrafik**
 
 3106 3134 3135 3136 3167 3168 3169
 
