@@ -28,8 +28,6 @@ This dataset has the **stable** status. This means that we will communicate when
 
 ResRobot route planner consists of two different endpoints, one for departures and one for arrivals. Both endpoints take exactly the same parameters and have the same response structure. API Calls take the stop id as a parameter, as well as some other parameters to fine-tune the results. It returns a list of departures or arrivals from the given stop, including a bit of information about each vehicle, such as where it is heading or where it comes from. 
 
-
-
 ## Example call
 
 This example call retrieves all routes from Stockholm Central Station \(740000001\) to Malmö Central Station \(740000003\), departing right now \(since no specific time or date is specified in the call\).

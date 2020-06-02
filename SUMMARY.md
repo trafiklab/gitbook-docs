@@ -26,7 +26,7 @@
       * [Realtime data](public-transport-data/our-data-and-apis/gtfs/gtfs-regional/gtfs-regional-realtime.md)
       * [Extra files](public-transport-data/our-data-and-apis/gtfs/gtfs-regional/extra-files.md)
   * [ResRobot](public-transport-data/our-data-and-apis/resrobot/README.md)
-    * [ResRobot Station lookup](public-transport-data/our-data-and-apis/resrobot/resrobot-station-lookup.md)
+    * [ResRobot Stop lookup](public-transport-data/our-data-and-apis/resrobot/resrobot-station-lookup.md)
     * [ResRobot Timetables](public-transport-data/our-data-and-apis/resrobot/resrobot-departures.md)
     * [ResRobot Route planner](public-transport-data/our-data-and-apis/resrobot/resrobot-routeplanner.md)
   * [SL](public-transport-data/our-data-and-apis/sl/README.md)
