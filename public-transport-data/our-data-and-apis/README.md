@@ -11,7 +11,7 @@ The following pages will give you an overview of all our data, describing what's
 | [ResRobot Stolptidstabeller](resrobot/resrobot-departures.md) | Json, XML | ✅ | Some, [see details](resrobot/resrobot-departures.md) | Entire Sweden | Departure board API |
 | [ResRobot Reseplanerare](resrobot/resrobot-routeplanner.md) | Json, XML | ✅ | ❌ | Entire Sweden | Travel planner API |
 | [SLs APIs ](sl/) | Json, XML | ✅ | ✅ | SL, Waxholmsbolaget | API collection |
-| Oxify Vehicle Positions |  |  |  |  | Position API |
+| Oxify Vehicle Positions |  |  |  |  | Realtime train position API |
 | Trafikverkets API |  |  |  |  | Road and rail API |
 
 
