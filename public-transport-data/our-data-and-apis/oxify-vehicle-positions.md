@@ -1,5 +1,7 @@
 # Oxify Vehicle positions
 
+Oxify Vehicle Positions is a Push-API which provides realtime vechile positions for public transport vehicles. Information is provided by Oxifiy's onboard internet system.
+
 ### API Overview
 
 Positions are represented by GPS data that is generated locally onboard each train-set. The current position is transmitted as a message every second to Oxyfi’s real-time server on shore.

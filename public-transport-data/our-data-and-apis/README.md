@@ -12,7 +12,7 @@ The following pages will give you an overview of all our data, describing what's
 | [ResRobot Reseplanerare](resrobot/resrobot-routeplanner.md) | Json, XML | ✅ | ❌ | Entire Sweden | Travel planner API |
 | [SLs APIs ](sl/) | Json, XML | ✅ | ✅ | SL, Waxholmsbolaget | API collection |
 | Oxify Vehicle Positions | Websocket | ❌ | ✅ | Värmlandstrafik, Norrtåg, Tåg i Bergslagen, Blekingetrafiken, Kalmars länstrafik | Realtime train position API |
-| Trafikverkets API |  |  |  |  | Road and rail API |
+| Trafikverkets API | Json, XML |  |  | Road and national rail | Road and rail API |
 
 
 
