@@ -1,5 +1,9 @@
 # GTFS Regional
 
+{% hint style="info" %}
+For technical details about HTTP headers and URLs, please use the OpenAPI Specification available on our developer portal.
+{% endhint %}
+
 ## What does this dataset contains?
 
 This dataset contains high quality detailled data, both static and realtime, in the GTFS format. It does not cover the entirety of Sweden.
@@ -32,5 +36,5 @@ The following table shows which operators
 
 ### How often does the data format changes? Do breaking changes happen?
 
-This dataset has the **beta** status. This means that the fields can be added, or changed without prior warning. However, when breaking changes are made, you will get one or two months time to update your implementations.
+This dataset has the **beta** status. This means that the fields can be added, or changed without prior warning. However, when breaking changes are made, you will get one or two months to update your implementations.
 

@@ -288,7 +288,9 @@ A stop time is a certain trip picking up or dropping of passengers at a certain 
         <br /><code>1</code> or empty - Times are considered exact.</td>
     </tr>
   </tbody>
-</table>{% hint style="warning" %}
+</table>
+
+{% hint style="warning" %}
 Stop\_times.txt is usually the largest file in a GTFS feed. Depending on the hardware and programming language, it can be computationally intensive to read all the data. Make sure you read this file in an efficient way \(for example by caching data, not reading the entire file into memory, ...\).
 {% endhint %}
 
@@ -404,7 +406,9 @@ service_id,monday,tuesday,wednesday,thursday,friday,saturday,sunday,start_date,e
       </td>
     </tr>
   </tbody>
-</table>```text
+</table>
+
+```text
 service_id,date,exception_type
 1,20200221,1
 1,20200224,1
@@ -473,7 +477,9 @@ service_id,date,exception_type
       </td>
     </tr>
   </tbody>
-</table>```text
+</table>
+
+```text
 shape_id,shape_pt_lat,shape_pt_lon,shape_pt_sequence,shape_dist_traveled
 1,57.927181,12.529311,1,0
 1,57.927172,12.529295,2,0
@@ -573,7 +579,9 @@ shape_id,shape_pt_lat,shape_pt_lon,shape_pt_sequence,shape_dist_traveled
       </td>
     </tr>
   </tbody>
-</table>```text
+</table>
+
+```text
 from_stop_id,to_stop_id,transfer_type,min_transfer_time,from_trip_id,to_trip_id
 9022014061616002,9022014061616002,1,,141010000981658971,141010000967489295
 9022014080420002,9022014080420002,1,,141010000981659030,141010000981658971

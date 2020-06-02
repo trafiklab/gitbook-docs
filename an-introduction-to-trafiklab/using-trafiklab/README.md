@@ -1,4 +1,4 @@
-# Using Trafiklab
+# Using Trafiklab.se
 
 {% hint style="success" %}
 New to trafiklab? Start reading here and continue to the next pages using the buttons at the bottom.

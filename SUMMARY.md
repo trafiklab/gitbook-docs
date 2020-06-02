@@ -5,7 +5,7 @@
 ## An introduction to Trafiklab
 
 * [About Trafiklab](an-introduction-to-trafiklab/about-trafiklab.md)
-* [Using Trafiklab](an-introduction-to-trafiklab/using-trafiklab/README.md)
+* [Using Trafiklab.se](an-introduction-to-trafiklab/using-trafiklab/README.md)
   * [Creating an account](an-introduction-to-trafiklab/using-trafiklab/creating-an-account.md)
   * [Creating a project](an-introduction-to-trafiklab/using-trafiklab/creating-a-project.md)
   * [Adding APIs to a project](an-introduction-to-trafiklab/using-trafiklab/adding-apis-to-a-project.md)
@@ -26,9 +26,9 @@
       * [Realtime data](public-transport-data/our-data-and-apis/gtfs/gtfs-regional/gtfs-regional-realtime.md)
       * [Extra files](public-transport-data/our-data-and-apis/gtfs/gtfs-regional/extra-files.md)
   * [ResRobot](public-transport-data/our-data-and-apis/resrobot/README.md)
-    * [ResRobot Routeplanner](public-transport-data/our-data-and-apis/resrobot/resrobot-routeplanner.md)
-    * [ResRobot Departures](public-transport-data/our-data-and-apis/resrobot/resrobot-departures.md)
-    * [Resrobot Station lookup](public-transport-data/our-data-and-apis/resrobot/resrobot-station-lookup.md)
+    * [ResRobot Station lookup](public-transport-data/our-data-and-apis/resrobot/resrobot-station-lookup.md)
+    * [ResRobot Timetables](public-transport-data/our-data-and-apis/resrobot/resrobot-departures.md)
+    * [ResRobot Route planner](public-transport-data/our-data-and-apis/resrobot/resrobot-routeplanner.md)
   * [SL](public-transport-data/our-data-and-apis/sl/README.md)
     * [SL Departures](public-transport-data/our-data-and-apis/sl/sl-departures.md)
     * [SL Routeplanner](public-transport-data/our-data-and-apis/sl/sl-routeplanner.md)

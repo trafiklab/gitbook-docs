@@ -1,8 +1,12 @@
 # Realtime data
 
+{% hint style="info" %}
+For technical details about HTTP headers, URLs,  and response structures, please use the OpenAPI Specification available on our developer portal.
+{% endhint %}
+
 ## Retrieving realtime data
 
-Read the specifications at dev.trafiklab.se for technical details. In order to retrieve the static data you need an API key. Follow the link below to read more about API keys.
+In order to retrieve the static data you need an API key. Follow the link below to read more about API keys.
 
 {% page-ref page="../../../../an-introduction-to-trafiklab/using-trafiklab/getting-api-keys.md" %}
 
