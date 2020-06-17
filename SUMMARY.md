@@ -38,16 +38,13 @@
     * [SL Disturbances](public-transport-data/our-data-and-apis/sl/sl-disturbances.md)
     * [SL Traffic status](public-transport-data/our-data-and-apis/sl/sl-traffic-status.md)
   * [Oxify Vehicle positions](public-transport-data/our-data-and-apis/oxify-vehicle-positions.md)
-  * [Combining data and APIs](public-transport-data/our-data-and-apis/combining-data.md)
 * [The right data type for your project](public-transport-data/the-right-data-type-for-your-project.md)
 * [Using our data](public-transport-data/transport-data-formats/README.md)
   * [Using GTFS Files](public-transport-data/transport-data-formats/using-gtfs-files/README.md)
     * [Static GTFS files](public-transport-data/transport-data-formats/using-gtfs-files/static-gtfs-files.md)
     * [Realtime GTFS files](public-transport-data/transport-data-formats/using-gtfs-files/realtime-gtfs-files.md)
-  * [Calling APIs](public-transport-data/transport-data-formats/json/README.md)
-    * [Conditional GET requests](public-transport-data/transport-data-formats/json/conditional-get-requests.md)
-    * [Calling APIs from a browser](public-transport-data/transport-data-formats/json/calling-apis-from-a-browser.md)
   * [Using NeTEx files](public-transport-data/transport-data-formats/using-netex-files.md)
+  * [Combining data and APIs](public-transport-data/transport-data-formats/combining-data.md)
 
 ## Developing with trafiklab <a id="using-trafiklab-data"></a>
 
@@ -59,6 +56,7 @@
 * [Best practices](using-trafiklab-data/best-practices/README.md)
   * [Interpreting HTTP Headers](using-trafiklab-data/best-practices/interpreting-http-headers.md)
   * [Client-side caching](using-trafiklab-data/best-practices/client-side-caching.md)
+  * [Conditional GET requests](using-trafiklab-data/best-practices/conditional-get-requests.md)
   * [Limiting requests](using-trafiklab-data/best-practices/limiting-requests.md)
   * [Keeping API keys secret](using-trafiklab-data/best-practices/keeping-api-keys-secret.md)
 * [Code fragments](using-trafiklab-data/code-fragments/README.md)

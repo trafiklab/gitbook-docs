@@ -29,7 +29,7 @@ This dataset has the **stable** status. This means that we will communicate when
 ResRobot Stop lookup takes the search string and the wanted number of results as parameters, and returns a list of matching stations with their location, name and id. Users can choose between exact matching and approximate matching by adding a question mark to the end of the search string. 
 
 {% hint style="info" %}
-Instead of using the station lookup endpoint, you can also use the stops.txt file from GTFS Sverige 2. This way you can provide autocomplete  and other search functions without internet access. It will make your application more responsive and more reliable as you don't have to wait for API responses. See [Combining data and APIs](../combining-data.md) for more information.
+Instead of using the station lookup endpoint, you can also use the stops.txt file from GTFS Sverige 2. This way you can provide autocomplete  and other search functions without internet access. It will make your application more responsive and more reliable as you don't have to wait for API responses. See [Combining data and APIs](../../transport-data-formats/combining-data.md) for more information.
 {% endhint %}
 
 ## Example calls
