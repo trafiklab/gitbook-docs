@@ -40,6 +40,12 @@ https://api.resrobot.se/v2/trip?originId=740000001&destId=740000003&format=json&
 
 ### Response
 
+För en exakt teknisk beskrivning av varje fält i svaret hanvisar vi till vår OpenAPI dokumentation.
+
+{% hint style="info" %}
+Note that an actual response contains more entries and stops - we removed some from this example response since it's only meant to show the structure of the response.
+{% endhint %}
+
 {% tabs %}
 {% tab title="Json" %}
 ```javascript
@@ -137,54 +143,6 @@ https://api.resrobot.se/v2/trip?originId=740000001&destId=740000003&format=json&
                   "lat": 59.330136,
                   "depTime": "11:41:00",
                   "depDate": "2020-06-02"
-                },
-                {
-                  "name": "Flemingsberg station (Huddinge kn)",
-                  "id": "740000031",
-                  "extId": "740000031",
-                  "routeIdx": 1,
-                  "lon": 17.945678,
-                  "lat": 59.217959,
-                  "depTime": "11:52:00",
-                  "depDate": "2020-06-02",
-                  "arrTime": "11:52:00",
-                  "arrDate": "2020-06-02"
-                },
-                {
-                  "name": "Södertälje Syd station",
-                  "id": "740000055",
-                  "extId": "740000055",
-                  "routeIdx": 2,
-                  "lon": 17.645367,
-                  "lat": 59.162415,
-                  "depTime": "12:03:00",
-                  "depDate": "2020-06-02",
-                  "arrTime": "12:03:00",
-                  "arrDate": "2020-06-02"
-                },
-                {
-                  "name": "Vagnhärad station (Trosa kn)",
-                  "id": "740000605",
-                  "extId": "740000605",
-                  "routeIdx": 3,
-                  "lon": 17.496694,
-                  "lat": 58.945739,
-                  "depTime": "12:19:00",
-                  "depDate": "2020-06-02",
-                  "arrTime": "12:19:00",
-                  "arrDate": "2020-06-02"
-                },
-                {
-                  "name": "Nyköping Centralstation",
-                  "id": "740000050",
-                  "extId": "740000050",
-                  "routeIdx": 4,
-                  "lon": 16.994781,
-                  "lat": 58.755689,
-                  "depTime": "12:46:00",
-                  "depDate": "2020-06-02",
-                  "arrTime": "12:46:00",
-                  "arrDate": "2020-06-02"
                 },
                 {
                   "name": "Kolmården station (Norrköping kn)",
@@ -293,54 +251,6 @@ https://api.resrobot.se/v2/trip?originId=740000001&destId=740000003&format=json&
                   "depTime": "13:59:00",
                   "depDate": "2020-06-02",
                   "arrTime": "13:59:00",
-                  "arrDate": "2020-06-02"
-                },
-                {
-                  "name": "Linghem station (Linköping kn)",
-                  "id": "740000849",
-                  "extId": "740000849",
-                  "routeIdx": 2,
-                  "lon": 15.787188,
-                  "lat": 58.436689,
-                  "depTime": "14:08:00",
-                  "depDate": "2020-06-02",
-                  "arrTime": "14:08:00",
-                  "arrDate": "2020-06-02"
-                },
-                {
-                  "name": "Linköping Centralstation",
-                  "id": "740000009",
-                  "extId": "740000009",
-                  "routeIdx": 3,
-                  "lon": 15.62496,
-                  "lat": 58.416634,
-                  "depTime": "14:16:00",
-                  "depDate": "2020-06-02",
-                  "arrTime": "14:15:00",
-                  "arrDate": "2020-06-02"
-                },
-                {
-                  "name": "Vikingstad station (Linköping kn)",
-                  "id": "740000868",
-                  "extId": "740000868",
-                  "routeIdx": 4,
-                  "lon": 15.431971,
-                  "lat": 58.383167,
-                  "depTime": "14:22:00",
-                  "depDate": "2020-06-02",
-                  "arrTime": "14:22:00",
-                  "arrDate": "2020-06-02"
-                },
-                {
-                  "name": "Mantorp station (Mjölby kn)",
-                  "id": "740000616",
-                  "extId": "740000616",
-                  "routeIdx": 5,
-                  "lon": 15.290732,
-                  "lat": 58.348622,
-                  "depTime": "14:28:00",
-                  "depDate": "2020-06-02",
-                  "arrTime": "14:28:00",
                   "arrDate": "2020-06-02"
                 },
                 {
