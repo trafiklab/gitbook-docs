@@ -38,8 +38,7 @@
     * [SL Disturbances](public-transport-data/our-data-and-apis/sl/sl-disturbances.md)
     * [SL Traffic status](public-transport-data/our-data-and-apis/sl/sl-traffic-status.md)
   * [Oxify Vehicle positions](public-transport-data/our-data-and-apis/oxify-vehicle-positions.md)
-* [The right data type for your project](public-transport-data/the-right-data-type-for-your-project.md)
-* [Using our data](public-transport-data/transport-data-formats/README.md)
+* [Transit data formats](public-transport-data/transport-data-formats/README.md)
   * [Using GTFS Files](public-transport-data/transport-data-formats/using-gtfs-files/README.md)
     * [Static GTFS files](public-transport-data/transport-data-formats/using-gtfs-files/static-gtfs-files.md)
     * [Realtime GTFS files](public-transport-data/transport-data-formats/using-gtfs-files/realtime-gtfs-files.md)
@@ -48,6 +47,10 @@
 
 ## Developing with trafiklab <a id="using-trafiklab-data"></a>
 
+* [The right data for your project](using-trafiklab-data/the-right-data-type-for-your-project/README.md)
+  * [Departure boards](using-trafiklab-data/the-right-data-type-for-your-project/departure-boards.md)
+  * [Route-planning](using-trafiklab-data/the-right-data-type-for-your-project/route-planning.md)
+  * [Obtaining stop ids](using-trafiklab-data/the-right-data-type-for-your-project/obtaining-stop-ids.md)
 * [Our SDKs and libraries](using-trafiklab-data/our-sdks-and-libraries/README.md)
   * [Java](using-trafiklab-data/our-sdks-and-libraries/java.md)
   * [PHP](using-trafiklab-data/our-sdks-and-libraries/php/README.md)
@@ -67,6 +70,7 @@
     * [Creating a fulfillment API](using-trafiklab-data/example-solutions/voice-assistant/creating-a-fulfillment-api.md)
     * [Testing and deploying your app](using-trafiklab-data/example-solutions/voice-assistant/testing-and-deploying-your-app.md)
     * [Importing our demo project](using-trafiklab-data/example-solutions/voice-assistant/importing-our-demo-project.md)
+    * [Putting it all online](using-trafiklab-data/example-solutions/voice-assistant/putting-it-all-online.md)
 * [Useful tools](using-trafiklab-data/related-tools/README.md)
   * [Postman](using-trafiklab-data/related-tools/postman.md)
   * [Github](using-trafiklab-data/related-tools/github.md)
