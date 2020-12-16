@@ -42,8 +42,10 @@
   * [Using GTFS Files](public-transport-data/transport-data-formats/using-gtfs-files/README.md)
     * [Static GTFS files](public-transport-data/transport-data-formats/using-gtfs-files/static-gtfs-files.md)
     * [Realtime GTFS files](public-transport-data/transport-data-formats/using-gtfs-files/realtime-gtfs-files.md)
+    * [The protobuf file format](public-transport-data/transport-data-formats/using-gtfs-files/the-protobuf-file-format.md)
   * [Using NeTEx files](public-transport-data/transport-data-formats/using-netex-files.md)
-  * [Combining data and APIs](public-transport-data/transport-data-formats/combining-data.md)
+  * [Combining data and APIs](public-transport-data/transport-data-formats/combining-data/README.md)
+    * [Converting SWEREF99 to WGS84](public-transport-data/transport-data-formats/combining-data/converting-sweref99-to-wgs84.md)
 
 ## Developing with trafiklab <a id="using-trafiklab-data"></a>
 
