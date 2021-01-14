@@ -16,9 +16,9 @@ A dataset like GTFS is the opposite of an API like ResRobot. Each has its own be
 
 | Well suited for | Not so suited for |
 | :--- | :--- |
-| Analyzing \(realtime\) transport data | Quickly getting the next departures from a stop |
-| Building your own routeplanner or API | Quickly calculating a route from A to B |
-| Getting a list of all public transport stopareas for an operator or a country | Projects where large files \(&gt;25MB\) can't be used |
+| Analysing \(real-time\) transport data | Quickly getting the next departures from a stop |
+| Building your own route-planner or API | Quickly calculating a route from A to B |
+| Getting a list of all public transport stop-areas for an operator or a country | Projects where large files \(&gt;25MB\) can't be used |
 | Getting the live position of all public transport vehicles |  |
 
 {% hint style="info" %}

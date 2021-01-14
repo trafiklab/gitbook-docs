@@ -37,7 +37,7 @@
     * [SL Nearby stops](public-transport-data/our-data-and-apis/sl/sl-nearby-stops.md)
     * [SL Disturbances](public-transport-data/our-data-and-apis/sl/sl-disturbances.md)
     * [SL Traffic status](public-transport-data/our-data-and-apis/sl/sl-traffic-status.md)
-  * [Oxify Vehicle positions](public-transport-data/our-data-and-apis/oxify-vehicle-positions.md)
+  * [Oxyfi Vehicle positions](public-transport-data/our-data-and-apis/oxify-vehicle-positions.md)
 * [Transit data formats](public-transport-data/transport-data-formats/README.md)
   * [Using GTFS Files](public-transport-data/transport-data-formats/using-gtfs-files/README.md)
     * [Static GTFS files](public-transport-data/transport-data-formats/using-gtfs-files/static-gtfs-files.md)

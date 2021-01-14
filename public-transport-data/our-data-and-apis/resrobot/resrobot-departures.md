@@ -6,7 +6,7 @@ For technical details about HTTP headers, URLs,  and response structures, please
 
 ## What does this API provide?
 
-ResRobot Timetables provides a list of departures or arrivals at a given stop. Users can specify the stop, date, time, transport modes, ... . Realtime data is available for SL, Skånetrafiken, Västtrafik and Trafikverket \(All train traffic including SJ, MTRX, .... \).
+ResRobot Timetables provides a list of departures or arrivals at a given stop. Users can specify the stop, date, time, transport modes, ... . Realtime data is available for SL, Skånetrafiken, Västtrafik and Trafikverket \(All train traffic including SJ, MTRX, ....  except for Arlanda Express\).
 
 ### Data format
 
@@ -14,7 +14,7 @@ The data is formatted as JSON or XML, depending on the `format` query parameter.
 
 ### How often is this data updated?
 
-The static data used for this API is updated when changes are made, at most once per day. Realtime data is updated once every minute.
+The static data used for this API is updated when changes are made, at most once per day. Real-time data is updated once every minute.
 
 ### Which operators are covered by this dataset?
 

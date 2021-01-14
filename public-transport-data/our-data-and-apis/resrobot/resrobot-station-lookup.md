@@ -1,12 +1,12 @@
 # ResRobot Stop lookup
 
 {% hint style="info" %}
-For technical details about HTTP headers, URLs,  and response structures, please use the OpenAPI Specification available on our developer portal.
+For technical details about HTTP headers, URLs,  and response structures, please use the Open-API Specification available on our developer portal.
 {% endhint %}
 
 ## What does this API provide?
 
-Resrobot stop lookup provides information about stops, including their ids and position, by searching based on their name.
+ResRobot stop lookup provides information about stops, including their ids and position, by searching based on their name.
 
 ### Data format
 

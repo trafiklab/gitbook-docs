@@ -6,7 +6,7 @@ For technical details about HTTP headers and URLs, please use the OpenAPI Specif
 
 ## What does this dataset contains?
 
-This dataset contains high quality detailled data, both static and realtime, in the GTFS format. It does not cover the entirety of Sweden.
+This dataset contains high quality detailed data, both static and real-time, in the GTFS format. It does not cover the entirety of Sweden.
 
 ### Data format
 
@@ -15,20 +15,20 @@ The data is in the GTFS format, and makes use of the GTFS Extensions. Realtime d
 ### How often is this dataset updated?
 
 The static data in this dataset is updated on a daily basis, typically between 03:00 and 07:00.  
-The realtime data \(ServiceAlerts.pb and TripUpdates.pb\) is updated every 15 seconds.  
+The real-time data \(ServiceAlerts.pb and TripUpdates.pb\) is updated every 15 seconds.  
 The vehicle position data \(VehiclePositions.pb\) is updated every 3 seconds.
 
 ### Which operators are covered by this dataset?
 
 The following table shows which operators 
 
-| Operator | Static data | Realtime data | Vehicle positions |
+| Operator | Static data | Real-time data | Vehicle positions |
 | :--- | :---: | :---: | :---: |
 | Dalatrafik | ✅ | ✅ | ✅ |
 | KLT | ✅ | ✅ | ✅ |
 | Skånetrafiken | ✅ | ✅ | ✅ |
-| SL | ✅ | ✅ | ⏳ |
-| UL | ✅ | ✅ | ⏳ |
+| SL | ✅ | ✅ | ✅ |
+| UL | ✅ | ✅ | ✅ |
 | Värmlandstrafik | ✅ | 🚫 | 🚫 |
 | Östgotatrafiken | ✅ | ✅ | ✅ |
 | Västtrafik | ✅ | 🚫 | 🚫 |

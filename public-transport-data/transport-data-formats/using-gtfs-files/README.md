@@ -1,6 +1,6 @@
 # Using GTFS Files
 
-The GTFS Standard consists of 2 parts: static and realtime data. In the following sections, we will help you getting started with both. 
+The GTFS Standard consists of 2 parts: static and real-time data. In the following sections, we will help you getting started with both. 
 
 {% page-ref page="static-gtfs-files.md" %}
 

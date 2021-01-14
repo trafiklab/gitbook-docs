@@ -1,7 +1,7 @@
 # Extra files
 
 {% hint style="info" %}
-For technical details about HTTP headers, URLs,  and response structures, please use the OpenAPI Specification available on our developer portal.
+For technical details about HTTP headers, URLs,  and response structures, please use the Open-API Specification available on our developer portal.
 {% endhint %}
 
 Extra files are files which provide additional information about the information in the GTFS files. They are not part of the GTFS standard, but contain the information which is needed to link the GTFS files to internal operator systems, or other data which is delivered by the operator. 

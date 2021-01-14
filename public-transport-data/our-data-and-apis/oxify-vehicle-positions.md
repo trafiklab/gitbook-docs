@@ -1,12 +1,12 @@
-# Oxify Vehicle positions
+# Oxyfi Vehicle positions
 
-Oxify Vehicle Positions is a Push-API which provides realtime vechile positions for public transport vehicles. Information is provided by Oxifiy's onboard internet system.
+Oxyfi Vehicle Positions is a Push-API which provides real-time vehicle positions for public transport vehicles. Information is provided by Oxyfi's onboard internet system.
 
 ### API Overview
 
 Positions are represented by GPS data that is generated locally onboard each train-set. The current position is transmitted as a message every second to Oxyfi’s real-time server on shore.
 
-Besides storing the message for future use the server customizes messages on the fly by tagging it with additional information and passes them on to subscribers. One such subscriber is the websocket API service.
+Besides storing the message for future use the server customizes messages on the fly by tagging it with additional information and passes them on to subscribers. One such subscriber is the WebSocket API service.
 
 The Trainpos API is one such subscriber. It subscribes on messages that contains the _NMEA version 2.2_ specification of the _$GPRMC_ sentence tagged with vehicleId and train number \(tågnummer\), both public and internal train numbers.
 
@@ -16,7 +16,7 @@ VehicleId is a unique number assigned to every train-set or carriage in Sweden, 
 
 ![](https://docs.google.com/drawings/d/syxOJ1JeO4zisbX6X1rSkSw/image?w=708&h=417&rev=397&ac=1)
 
-The Trainpos API will redistribute the real-time positions to all Trainpos subscribers. A Trainpos API subscriber is typically some form of server that in turn is responsible to distribute positions to all of its clients. In other words, the clients should not try to subscribe directly from the Trainspos API. In fact, the API key is only valid for one subscriber, if a new subscribe request arrives at the API, it will close any open websocket with the same API key.
+The Trainpos API will redistribute the real-time positions to all Trainpos subscribers. A Trainpos API subscriber is typically some form of server that in turn is responsible to distribute positions to all of its clients. In other words, the clients should not try to subscribe directly from the Trainspos API. In fact, the API key is only valid for one subscriber, if a new subscribe request arrives at the API, it will close any open WebSocket with the same API key.
 
 The total delay from position generation onboard until it is sent out from the real-time server is typically less than 100 ms. The vast majority of this delay is occurring in the mobile network that connects the vehicle to the internet.
 
@@ -24,7 +24,7 @@ Each train-set or carriage reports its position every second so you should get a
 
 ### Message Details
 
-A message sent from the real-time server to a subscriber is encoded as an ASCII-string and sent over the subscribers websocket.
+A message sent from the real-time server to a subscriber is encoded as an ASCII-string and sent over the subscribers WebSocket.
 
 The message format is based on the NMEA specification version 2.2 and contains the GPRMC sentence followed by a number of additional fields as explained in Table 1. Each message begins with $GP and fields are separated by comma. Time zone will always be UTC.
 
@@ -138,7 +138,7 @@ On the 2020-06-01 the current list of trains is:
 
 ### What is next
 
-Oxyfi continuously works on adding more vehicles to this real-time position API. It may also be possible to add filters in the websocket request so only positions for the specified trains are forwarded over the websocket.
+Oxyfi continuously works on adding more vehicles to this real-time position API. It may also be possible to add filters in the WebSocket request so only positions for the specified trains are forwarded over the WebSocket.
 
 We are very happy to receive feedback and feature requests, please drop an email to [apisupport@oxyfi.com](mailto:apisupport@oxyfi.com).
 

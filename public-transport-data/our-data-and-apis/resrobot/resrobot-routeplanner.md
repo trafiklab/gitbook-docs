@@ -40,8 +40,6 @@ https://api.resrobot.se/v2/trip?originId=740000001&destId=740000003&format=json&
 
 ### Response
 
-För en exakt teknisk beskrivning av varje fält i svaret hanvisar vi till vår OpenAPI dokumentation.
-
 {% hint style="info" %}
 Note that an actual response contains more entries and stops - we removed some from this example response since it's only meant to show the structure of the response.
 {% endhint %}
